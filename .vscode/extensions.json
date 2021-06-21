@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "formulahendry.auto-rename-tag",
+        "alexandre-eliot.html-jsx-classes",
+        "abusaidm.html-snippets",
+        "christian-kohler.path-intellisense",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "graphql.vscode-graphql"
+    ]
+}
