@@ -7,23 +7,30 @@ import * as Yup from 'yup'
 import Swal from 'sweetalert2';
 import { useEffect, useState } from 'react';
 
+
+/*Para que el cache se actualice al momento de un update es necesario un id*/
 const OBTENER_CLIENTE = gql`
-    query obtenerCliente($id:ID!) {
-        obtenerCliente(id:$id) {
+    query obtenerCliente($id: ID!) {
+        obtenerCliente(id: $id) {
+            id
             nombre
             apellido
             email
-            telefono
             empresa
+            telefono
         }
     }
 `;
-
+ 
 const ACTUALIZAR_CLIENTE = gql`
     mutation actualizarCliente($id: ID!, $input: ClienteInput) {
         actualizarCliente(id: $id, input: $input) {
+            id
             nombre
+            apellido
             email
+            empresa
+            telefono
         }
     }
 `;
